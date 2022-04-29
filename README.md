@@ -1,5 +1,5 @@
 # TicTacToe
-
+<a href='https://bschampion.github.io/TicTacToe/'>Click here to please the game</a>
 ## Summary of Project
 
 
