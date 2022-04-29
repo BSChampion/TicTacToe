@@ -2,8 +2,8 @@ var gridNum = 3
 //userinput for gridNum to expand or drop down list
 var counter = 1
 
-var ansArr = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-var players = {Player1: 'X',  Player2: 'O'}
+var ansArr = ['O', 'X', 'X', 0, 'O', 0, 0, 0, 'O']
+var players = ['X', 'O']
 
 for (var i = 0; i < players.length; i++) {
     if ((ansArr[0] && ansArr[1] && ansArr[2] === players[i] ) || 
@@ -14,37 +14,19 @@ for (var i = 0; i < players.length; i++) {
         (ansArr[2] && ansArr[5] && ansArr[8] === players[i] ) || 
         (ansArr[0] && ansArr[4] && ansArr[8] === players[i] ) || 
         (ansArr[2] && ansArr[4] && ansArr[6] === players[i] )) {
-        console.log(players[i] + "X wins")
+        console.log(players[i] + " wins")
+    }
 }
-
 
 if (counter === 10) {
     console.log("tie")
 }
 
-// win indexof - 012, 345, 678, 036, 147, 258, 048, 246 
-// else tie
-
-// var boxArr = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-// win indexof - 012, 345, 678, 036, 147, 258, 048, 246 
-// else tie
-
-// alt class 1row, 2 row, 3row, 4column, 5col, 6col, 1diag, 2diag
-// number of row/column... if class = number of rows/column/diag = win
-
-// toggle classes on click
-
-// console.log(document.querySelector('div.1'))
-
-win = 0
 function markBox(event) {
     var boxClickedOn = event.target
     var allDivBox = document.querySelectorAll('div')
     
     counter = counter + 1
-    // if (counter % 2) {
-    //     boxClickedOn = event.target.textContent = 'X'
-    // } else {boxClickedOn = boxClickedOn.textContent = 'O'}
 
     if (boxClickedOn.tagName === 'DIV') {
         if (counter % 2) {
