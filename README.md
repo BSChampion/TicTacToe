@@ -1,19 +1,22 @@
 # TicTacToe
-<a href='https://bschampion.github.io/TicTacToe/'>Click here to please the game</a>
+<a href='https://bschampion.github.io/TicTacToe/'>Click here to play the game</a>
 ## Summary of Project
 
 
 ## Plan
 9 box's with abilty to expand by using var gridNum
 Change player turn managed by var counter % 2
-class's to change on click
+class's to change on .addEventListener('click' function)
+boxedClickedOn.textcontent = X or O (if loop) (could use image once its working)
+
+
 
 ## Cool tech you used (or code you're proud of)
 
 
 ## Lessons you learnt
 
-##Expanding ideas
+## Expanding ideas
 reset button (would you like to play again
 Names of Players
 Computer Player
