@@ -1,8 +1,8 @@
 body {
     text-align: center;
 }
-.gameboard {
-    height: 100px;
+.gameBoard {
+    height: 350px;
     width: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
