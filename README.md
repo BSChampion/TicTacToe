@@ -1,5 +1,5 @@
 # TicTacToe
-<a href='https://bschampion.github.io/TicTacToe/'>Click here to please the game</a>
+<a href='https://bschampion.github.io/TicTacToe/'>Click here to play the game</a>
 ## Summary of Project
 
 
@@ -10,6 +10,8 @@ class's to change on click - too long
 answer array - shorter
 stop double clicking on boxes
 stop game after win
+class's to change on .addEventListener('click' function)
+boxedClickedOn.textcontent = X or O (if loop) (could use image once its working)
 
 ## Cool tech you used (or code you're proud of)
 
