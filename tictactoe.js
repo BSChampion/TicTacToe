@@ -4,16 +4,11 @@ var counter = 1
 var messageBoard = document.querySelector('.messageBoard')
 var resetBtn = document.querySelector('.reset')
 var ansArr = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-var players = ['X', 'O']
+var players = ['O', 'X']
 var allDivBox = document.querySelectorAll('div')
 var counter2 = 1
-// var elem2 = 'https://bit.ly/38CawXZ'
-// var elem = document.createElement("img");
-//   elem.setAttribute("src", "https://media3.giphy.com/media/xvZOuJeLij0W9IwCdH/giphy.gif?cid=790b7611f7d6f1d8b24b92cbf17ad6945c454e19c22b887d&rid=giphy.gif&ct=g");
-//   elem.setAttribute("height", "100");
-//   elem.setAttribute("width", "100");
-//   elem.setAttribute("alt", "1");
-// https://media4.giphy.com/media/3o7WTqRKlVRj0wsYQo/giphy.gif?cid=ecf05e475o9goo8i63ltmgqkm0de9joeyo1nost2d8mlhu6c&rid=giphy.gif&ct=g
+var player1Score = Number(document.querySelector('p.player1Score').textContent)
+var player2Score = Number(document.querySelector("p.player2Score").textContent)
 
 function markBox(event) {
     var boxClickedOn = event.target
@@ -22,7 +17,7 @@ function markBox(event) {
     if ((boxClickedOn.tagName === 'DIV') && (ansArr[boxClickedOn.id] === 0)) {
         counter = counter + 1
         if (counter % 2) {
-            event.target.textContent = 'X'
+            boxClickedOn.textContent = 'X'
             messageBoard.textContent = "Player O's turn"
             ansArr.splice(boxClickedOn.id, 1, 'X')
             if (document.querySelector('.player1Name').textContent !== "Player 1") {
@@ -47,19 +42,15 @@ function markBox(event) {
                 elem.setAttribute("alt", "1")
                 boxClickedOn.appendChild(elem)
             }
-
-            }
-        } else if (counter === (gridNum*gridNum)+1) {
-            counter = counter + 1
-            messageBoard.textContent = "TIE"
-            ansArr = [1, 1, 1, 1, 1, 1, 1, 1, 1]
-            resetBtn.textContent = "Click here to play again"
-        } else if (counter === (gridNum*gridNum)+2) {
-            counter = counter + 1
-            messageBoard.textContent = "Please click the Play Again button to play another game"
-        } else if (counter >= (gridNum*gridNum)+3) {
-            messageBoard.textContent = "Stop clicking the game is over!!!"
         }
+    } else if (counter === (gridNum*gridNum)+2) {
+        counter = counter + 1
+        messageBoard.textContent = "Please click the Play Again button to play another game"
+    } else if (counter >= (gridNum*gridNum)+3) {
+        messageBoard.textContent = "Stop clicking the game is over!!!"
+    }
+
+    
 
        // winning conditions 
     for (var i = 0; i < players.length; i++) {
@@ -69,13 +60,25 @@ function markBox(event) {
             resetBtn.textContent = "Click here to play again"
             ansArr = [1, 1, 1, 1, 1, 1, 1, 1, 1]
             if (players[i] === 'X') {
-                document.querySelector('p.playerXScore').textContent = Number(document.querySelector('p.playerXScore').textContent)+1
+                document.querySelector('p.player2Score').textContent = Number(document.querySelector('p.player2Score').textContent)+1;
             } else {
-                document.querySelector('p.playerOScore').textContent = Number(document.querySelector('p.playerOScore').textContent)+1
+                document.querySelector('p.player1Score').textContent = Number(document.querySelector('p.player1Score').textContent)+1;
             }
-        }
-        }
+            if (Number(document.querySelector('p.player1Score').textContent) > Number(document.querySelector('p.player2Score').textContent)) {
+                document.querySelector('body').className = 'background1'
+            } else if (Number(document.querySelector('p.player1Score').textContent) < Number(document.querySelector('p.player2Score').textContent)) {
+                document.querySelector('body').className = 'background2'
+            } else if (player1Score === player2Score) {
+                document.querySelector('body').className = ''
+            }
+        } else if (counter === (gridNum*gridNum)+1) {
+            counter = counter + 1
+            messageBoard.textContent = "TIE"
+            ansArr = [1, 1, 1, 1, 1, 1, 1, 1, 1]
+            resetBtn.textContent = "Click here to play again"
+        } 
     }
+}
     
 
 document

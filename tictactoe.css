@@ -2,6 +2,18 @@ body {
     text-align: center;
     background-color: rgb(235, 226, 245);
 }
+.background2 {
+    background-image: url("https://media4.giphy.com/media/3o7WTqRKlVRj0wsYQo/giphy.gif?cid=ecf05e475o9goo8i63ltmgqkm0de9joeyo1nost2d8mlhu6c&rid=giphy.gif&ct=g");
+}
+.background1 {
+    background-image: url("https://media3.giphy.com/media/xvZOuJeLij0W9IwCdH/giphy.gif?cid=790b7611f7d6f1d8b24b92cbf17ad6945c454e19c22b887d&rid=giphy.gif&ct=g");
+}
+.backboard {
+    background-color: rgb(235, 226, 245);
+    width: fit-content;
+    margin: 0 auto;
+     
+}
 h1 {
     font-size: 70px;
     transform: rotate(-10deg);
