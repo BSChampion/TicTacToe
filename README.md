@@ -26,8 +26,10 @@ Names of Players - completed
 Computer Player
 Score card - best to 5
 theme
+insert concepts learnt in the course that have not yet been used
 
-
+X vs O which player is which?
+confirm basic details before writing getting too involved
 
 learnt that although the testing and made this look like it worked... logged both winning
 for (var i = 0; i < players.length; i++) {

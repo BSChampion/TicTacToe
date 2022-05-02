@@ -112,7 +112,14 @@ customiseBtn =
     .addEventListener('click', customise)
 
 
+// function  changeBackgoundColour(event) {
 
+//     document.querySelector('.backboard').style.backgroundColor = "(document.querySelector('input').value)"
+// }
+
+// var changeBackgoundColourBtn = 
+//     document.querySelector('.backgroundColour')
+//     .addEventListener('click', changeBackgoundColour)
 
 
 
@@ -124,27 +131,26 @@ customiseBtn =
 //         document.querySelector('.theme')
 //         .addEventListener('click', theme)
 
-// function computerPlayerMove(event) {
+function computerMove(event) {
     
-//     computerMove = Math.floor(Math.random() * (9 - 0))
-//     console.log(counter)
+    computerMoveNum = Math.floor(Math.random() * (9 - 0))
+    console.log(counter)
 
     
-//     if (ansArr[computerMove] === 0) {
-//         counter = counter + 1        
-//         if (counter % 2) {
-//             allDivBox[computerMove].textContent = 'X'
-//             messageBoard.textContent = "Player O's turn"
-//             ansArr.splice(allDivBox[computerMove], 1, 'X')
-//         } else {
-//             allDivBox[computerMove].textContent = 'O'
-//             messageBoard.textContent = "Player X's turn"
-//             ansArr.splice(allDivBox[computerMove].id, 1, 'O')}
-//     }
-   
-    
-// }
+if (ansArr[computerMoveNum] === 0) {
+    counter = counter + 1        
+    if (counter % 2) {
+        allDivBox[computerMoveNum].textContent = 'X'
+        messageBoard.textContent = "Player O's turn"
+        ansArr.splice(allDivBox[computerMove], 1, 'X')
+    } else {
+        allDivBox[computerMoveNum].textContent = 'O'
+        messageBoard.textContent = "Player X's turn"
+        ansArr.splice(allDivBox[computerMoveNum].id, 1, 'O')
+    }
+}  
+}
 
-// computerPlayerMoveBtn = 
-//     document.querySelector('.computerPlayerMove')
-//     .addEventListener('click', computerPlayerMove)
+computerMoveBtn = 
+    document.querySelector('.computerMove')
+    .addEventListener('click', computerMove)
