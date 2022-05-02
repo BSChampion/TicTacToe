@@ -1,10 +1,12 @@
 body {
     text-align: center;
-    /* background-color: blueviolet; */
+    background-color: rgb(235, 226, 245);
 }
 h1 {
-    font-size: xx-large;
+    font-size: 70px;
+    transform: rotate(-10deg);
 }
+
 .middle {
     display: flex;
     justify-content: center;
@@ -28,7 +30,7 @@ div {
     height: 100px;
     width: 100px;
     font-size: 90px;
-    background-color: aquamarine;
+    background-color: rgb(186, 245, 225);
 }
 .messageBoard {
     font-size: 70px;
