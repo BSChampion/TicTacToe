@@ -66,10 +66,13 @@ function markBox(event) {
             }
             if (Number(document.querySelector('p.player1Score').textContent) > Number(document.querySelector('p.player2Score').textContent)) {
                 document.querySelector('body').className = 'background1'
+                document.querySelector('.backboard').style.opacity = '0.6'
             } else if (Number(document.querySelector('p.player1Score').textContent) < Number(document.querySelector('p.player2Score').textContent)) {
                 document.querySelector('body').className = 'background2'
+                document.querySelector('.backboard').style.opacity = '0.6'
             } else if (player1Score === player2Score) {
                 document.querySelector('body').className = ''
+                document.querySelector('.backboard').style.opacity = '1'
             }
         } else if (counter === (gridNum*gridNum)+1) {
             counter = counter + 1
