@@ -1,9 +1,22 @@
 body {
     text-align: center;
+    /* background-color: blueviolet; */
+}
+h1 {
+    font-size: xx-large;
+}
+.middle {
+    display: flex;
+    justify-content: center;
+    margin: 20px 20px 0 20px;
+}
+.side1, .side2 {
+    padding: 50px;
+    font-size: 50px;
 }
 .gameBoard {
-    height: 350px;
-    width: 100px;
+    height: fit-content;
+    width: fit-content;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -17,28 +30,13 @@ div {
     font-size: 90px;
     background-color: aquamarine;
 }
-.r1 {
-    color: blueviolet;
-}
-.r2 {
-    color: teal;
-}
-.r3 {
-    color: blue;
+.messageBoard {
+    font-size: 70px;
 }
 
-.c1 {
-    text-decoration: overline;
-}
-.c2 {
-    text-decoration: line-through;
-}
-.c3 {
-    text-decoration: underline;
-}
-.d1 {
-    font-size: 50px;
-}
-.d2 {
-    background-color: red
-}
+
+/* @media screen and (max-width: 899px) {
+    body {
+        background-color: blue;
+    }
+} */

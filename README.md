@@ -5,13 +5,14 @@
 
 ## Plan
 9 box's with abilty to expand by using var gridNum
-Change player turn managed by var counter % 2
+Change player turn managed by var counter % 2 - completed
 class's to change on click - too long
-answer array - shorter
-stop double clicking on boxes
-stop game after win
+answer array - shorter - completed
+stop double clicking on boxes - completed
+stop game after win - completed
 class's to change on .addEventListener('click' function)
 boxedClickedOn.textcontent = X or O (if loop) (could use image once its working)
+
 
 ## Cool tech you used (or code you're proud of)
 
@@ -19,10 +20,12 @@ boxedClickedOn.textcontent = X or O (if loop) (could use image once its working)
 ## Lessons you learnt
 
 ##Expanding ideas
-Completed - reset button (would you like to play again)
-Names of Players
+reset button (would you like to play again) - Completed
+new round - new game
+Names of Players - completed
 Computer Player
 Score card - best to 5
+theme
 
 
 
