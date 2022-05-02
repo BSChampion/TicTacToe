@@ -135,21 +135,20 @@ function computerMove(event) {
     
     computerMoveNum = Math.floor(Math.random() * (9 - 0))
     console.log(counter)
-
     
-if (ansArr[computerMoveNum] === 0) {
-    counter = counter + 1        
-    if (counter % 2) {
+    if ((ansArr[computerMoveNum] === 0) && (counter % 2)) {
+        counter = counter + 1  
         allDivBox[computerMoveNum].textContent = 'X'
         messageBoard.textContent = "Player O's turn"
-        ansArr.splice(allDivBox[computerMove], 1, 'X')
-    } else {
+        ansArr.splice(allDivBox[computerMoveNum].id, 1, 'X')
+    } else if (ansArr[computerMoveNum] === 0) {
+        counter = counter + 1  
         allDivBox[computerMoveNum].textContent = 'O'
         messageBoard.textContent = "Player X's turn"
         ansArr.splice(allDivBox[computerMoveNum].id, 1, 'O')
     }
 }  
-}
+
 
 computerMoveBtn = 
     document.querySelector('.computerMove')
